@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.fragments.HomeFragment">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabBackground="?colorPrimary"
+        app:tabIndicatorColor="@color/white"
+        app:tabIndicatorFullWidth="true"
+        app:tabIndicatorHeight="3dp"
+        app:tabMaxWidth="0dp"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextColor="@color/gray_300">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/movie_list" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/about_us" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.mikelau.views.shimmer.ShimmerRecyclerViewX
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            app:shimmer_demo_angle="20"
+            app:shimmer_demo_child_count="15"
+            app:shimmer_demo_grid_child_count="1"
+            app:shimmer_demo_layout="@layout/item_movie_shimmer"
+            app:shimmer_demo_layout_manager_type="linear_vertical"
+            tools:listitem="@layout/item_movie" />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="-4dp"
+            android:layout_marginBottom="-6dp"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/blue_300"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/lyt_failed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/TextAppearance.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/could_not_load_list_of_movies" />
+
+            <com.github.leandroborgesferreira.loadingbutton.customViews.CircularProgressButton
+                android:id="@+id/btn_sync"
+                android:layout_width="150dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="@dimen/margin_large"
+                android:background="@drawable/bg_button"
+                android:text="@string/retry"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:finalCornerAngle="50dp"
+                app:initialCornerAngle="50dp"
+                app:spinning_bar_color="@color/white"
+                app:spinning_bar_padding="6dp"
+                app:spinning_bar_width="3dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

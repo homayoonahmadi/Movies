@@ -1,0 +1,41 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Movies" parent="BaseTheme">
+        <!--default background color-->
+        <item name="android:windowBackground">@color/white</item>
+
+        <!--color used for surfaces like toast-->
+        <item name="colorSurface">@color/blue_gray_800</item>
+        <item name="colorSurfaceBright">@color/white</item>
+        <item name="colorSurfaceVariant">@color/white</item>
+
+        <!--default text color-->
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:textColorPrimaryInverse">@color/white</item>
+
+        <item name="titleTextColor">?colorPrimary</item>
+        <item name="itemTextColor">@color/blue_gray_900</item>
+
+        <item name="shadowColor">@color/shadow_day</item>
+        <item name="shadowColorLight">@color/shadow_day_light</item>
+
+        <!--form background-->
+        <item name="colorSecondaryVariant">@color/blue_50</item>
+
+        <!--custom edit text background-->
+        <item name="colorSecondaryContainer">@color/blue_100</item>
+
+        <!--primary color used for surfaces-->
+        <item name="colorPrimaryContainer">@color/blue_700</item>
+
+        <!--floating action button background-->
+        <item name="colorBackgroundFloating">@color/white</item>
+    </style>
+
+    <style name="TextInputLayout.OutlinedBox" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:textColorHint">@color/gray_600</item>
+    </style>
+
+    <style name="Theme.Movies" parent="Base.Theme.Movies" />
+</resources>

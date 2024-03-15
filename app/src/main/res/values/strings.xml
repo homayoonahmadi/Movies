@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Movies</string>
+    <string name="retry">Retry…</string>
+    <string name="could_not_load_list_of_movies">Could not load list of movies</string>
+    <string name="error_in_loading_movies">Error in loading movies</string>
+    <string name="movie_list">Movie List</string>
+    <string name="about_us">About Us</string>
+</resources>
